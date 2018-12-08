@@ -1,0 +1,12 @@
+.container {
+    margin-top: 60px;
+}
+
+#login_button {
+    margin-right: 5px;
+}
+
+#footer-content {
+    background-color: #d9d9d9;
+    padding-top: 5px;
+}
