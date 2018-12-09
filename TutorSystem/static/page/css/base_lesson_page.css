@@ -117,3 +117,8 @@ ul ul a {
 #page_content {
     margin-left: 5px;
 }
+
+.sidebar_active {
+    color: #7386D5;
+    background: #fff;
+}

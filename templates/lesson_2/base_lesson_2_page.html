@@ -1,0 +1,37 @@
+{% extends 'page/base_lesson_page.html' %}
+{% load static %}
+
+{% block title %}
+    Lesson 2 Test
+{% endblock title %}
+
+{% block head_css_section %}
+    <link rel="stylesheet" href="{% static 'code_mirror/lib/codemirror.css' %}">
+    <link rel="stylesheet" href="{% static 'lesson_2/css/test_skulpt.css' %}">
+{% endblock head_css_section %}
+
+{% block lesson_2_active %}
+    active
+{% endblock lesson_2_active %}
+
+{% block side_nav_header %}
+    Lesson 2
+{% endblock side_nav_header %}
+
+{% block side_nav_content %}
+    <li>
+        <a href="{% url 'test_skulpt' %}" class="{% block skulpt_active %}{% endblock skulpt_active %}">Test_Skulpt</a>
+    </li>
+    <li>
+        <a href="#">Placeholder</a>
+    </li>
+    <li>
+        <a href="#">Placeholder</a>
+    </li>
+    <li>
+        <a href="#">Placeholder</a>
+    </li>
+    <li>
+        <a href="#">Placeholder</a>
+    </li>
+{% endblock side_nav_content %}

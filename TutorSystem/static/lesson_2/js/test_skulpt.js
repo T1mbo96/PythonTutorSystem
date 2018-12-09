@@ -1,3 +1,5 @@
+var editor;
+
 function outf(text) {
     var mypre = document.getElementById("output");
     mypre.innerHTML = mypre.innerHTML + text;
@@ -10,7 +12,7 @@ function builtinRead(x) {
 }
 
 function runit() {
-    var prog = document.getElementById("custom_code").value;
+    var prog = editor.getDoc().getValue();
     var mypre = document.getElementById("output");
     mypre.innerHTML = '';
     Sk.pre = "output";
@@ -30,9 +32,8 @@ function runit() {
 $(document).ready(function () {
     //code here...
     var code = $("#custom_code")[0];
-    var editor = CodeMirror.fromTextArea(code, {
+    editor = CodeMirror.fromTextArea(code, {
         lineNumbers: true,
-        mode: "python"
+        mode: "python",
     });
-
 });

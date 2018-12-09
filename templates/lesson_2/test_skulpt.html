@@ -1,40 +1,9 @@
-{% extends 'page/base_lesson_page.html' %}
+{% extends 'lesson_2/base_lesson_2_page.html' %}
 {% load static %}
 
-{% block title %}
-    Lesson 2 Test
-{% endblock title %}
-
-{% block head_css_section %}
-    <link rel="stylesheet" href="{% static 'code_mirror/lib/codemirror.css' %}">
-    <link rel="stylesheet" href="{% static 'lesson_2/css/test_skulpt.css' %}">
-{% endblock head_css_section %}
-
-{% block lesson_2_active %}
-    active
-{% endblock lesson_2_active %}
-
-{% block side_nav_header %}
-    Lesson 2
-{% endblock side_nav_header %}
-
-{% block side_nav_content %}
-    <li>
-        <a href="#">Test_Skulpt</a>
-    </li>
-    <li>
-        <a href="#">Placeholder</a>
-    </li>
-    <li>
-        <a href="#">Placeholder</a>
-    </li>
-    <li>
-        <a href="#">Placeholder</a>
-    </li>
-    <li>
-        <a href="#">Placeholder</a>
-    </li>
-{% endblock side_nav_content %}
+{% block skulpt_active %}
+    sidebar_active
+{% endblock skulpt_active %}
 
 {% block page_content %}
     <!-- Skulpt -->
@@ -50,13 +19,21 @@
     <h3>Enter your Code here:</h3>
     <form>
         <label for="custom_code"></label>
-        <textarea id="custom_code" cols="40" rows="10"></textarea>
+        <textarea id="custom_code" cols="40" rows="10">import turtle
+
+t = turtle.Turtle()
+t.forward(100)
+
+print "Hello World"
+        </textarea>
         <br/>
         <div id="skulpt_run_btn">
             <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
         </div>
     </form>
+    <h3>Output:</h3>
     <pre id="output"></pre>
     <!-- If you want turtle graphics include a canvas -->
+    <h3>Canvas for graphics:</h3>
     <div id="mycanvas"></div>
 {% endblock page_content %}

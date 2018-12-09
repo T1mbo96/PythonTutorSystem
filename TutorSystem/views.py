@@ -22,9 +22,13 @@ def sign_up(request):
     return render(request, 'registration/sign_up.html', {'form': form})
 
 
-def lesson_1(request):
-    return render(request, 'lesson_1/test.html')
+def test_blockly_maze_embed(request):
+    return render(request, 'lesson_1/test_blockly_maze_embed.html')
 
 
-def lesson_2(request):
+def test_blockly_custom(request):
+    return render(request, 'lesson_1/test_blockly_custom.html')
+
+
+def test_skulpt(request):
     return render(request, 'lesson_2/test_skulpt.html')

@@ -1,0 +1,31 @@
+{% extends 'lesson_1/base_lesson_1_page.html' %}
+{% load static %}
+
+{% block blockly_custom_active %}
+    sidebar_active
+{% endblock blockly_custom_active %}
+
+{% block page_content %}
+    <script src="{% static 'blockly/js/blockly_compressed.js' %}"></script>
+    <script src="{% static 'blockly/js/blocks_compressed.js' %}"></script>
+    <script src="{% static 'blockly/msg/js/de.js' %}"></script>
+
+    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+
+    <xml id="toolbox" style="display: none">
+        <category name="Logic" colour="210">...</category>
+        <category name="Loops" colour="120">...</category>
+        <category name="Math" colour="230">...</category>
+        <category name="Colour" colour="20">...</category>
+        <category name="Variables" colour="330" custom="VARIABLE"></category>
+        <category name="Functions" colour="290" custom="PROCEDURE"></category>
+    </xml>
+
+{% endblock page_content %}
+
+{% block footer_javascript_section %}
+    <script>
+        var workspace = Blockly.inject('blocklyDiv',
+            {toolbox: document.getElementById('toolbox')});
+    </script>
+{% endblock footer_javascript_section %}
