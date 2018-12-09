@@ -44,6 +44,9 @@
                     <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 {% if user.is_authenticated %}
+                    <li class="nav-item {% block syntax_compendium_active %}{% endblock syntax_compendium_active %}">
+                        <a class="nav-link" href="{% url 'compendium' %}">Kompendium</a>
+                    </li>
                     <li class="nav-item {% block lesson_1_active %}{% endblock lesson_1_active %}">
                         <a class="nav-link" href="{% url 'test_blockly_maze_embed' %}">Lesson 1</a>
                     </li>

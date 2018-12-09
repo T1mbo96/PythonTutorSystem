@@ -32,3 +32,7 @@ def test_blockly_custom(request):
 
 def test_skulpt(request):
     return render(request, 'lesson_2/test_skulpt.html')
+
+
+def syntax_compendium(request):
+    return render(request, 'syntax_compendium/compendium.html')

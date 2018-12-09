@@ -1,0 +1,109 @@
+{% extends 'page/base_sidenav_page.html' %}
+{% load static %}
+
+{% block title %}
+    Kompendium
+{% endblock title %}
+
+{% block head_css_section %}
+    <link rel="stylesheet" href="{% static 'syntax_compendium/css/compendium.css' %}">
+{% endblock head_css_section %}
+
+{% block syntax_compendium_active %}
+    active
+{% endblock syntax_compendium_active %}
+
+{% block side_nav_header %}
+    Syntax Kompendium
+{% endblock side_nav_header %}
+
+{% block side_nav_content %}
+    <p>
+        <input id="search" type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </p>
+    <li>
+        <a href="{% url 'compendium' %}#variables">Variablen</a>
+    </li>
+    <li>
+        <a href="{% url 'compendium' %}#classes">Klassen</a>
+    </li>
+    <li>
+        <a href="{% url 'compendium' %}#functions">Funktionen</a>
+    </li>
+    <li>
+        <a href="{% url 'compendium' %}#lists">Listen</a>
+    </li>
+    <li>
+        <a href="{% url 'compendium' %}#arrays">Arrays</a>
+    </li>
+{% endblock side_nav_content %}
+
+{% block page_content %}
+    <h1 id="variables">Variablen</h1>
+    Variablen sind sehr hilfreich.
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 id="classes">Klassen</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 id="functions">Funktionen</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 id="lists">Listen</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 id="arrays">Arrays</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock page_content %}
