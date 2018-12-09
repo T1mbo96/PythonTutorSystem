@@ -24,3 +24,7 @@ def sign_up(request):
 
 def lesson_1(request):
     return render(request, 'lesson_1/test.html')
+
+
+def lesson_2(request):
+    return render(request, 'lesson_2/test_skulpt.html')
