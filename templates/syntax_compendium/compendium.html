@@ -18,92 +18,102 @@
 {% endblock side_nav_header %}
 
 {% block side_nav_content %}
-    <p>
-        <input id="search" type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </p>
+    <script src="{% static 'syntax_compendium/js/compendium.js' %}"></script>
+
+    <form autocomplete="off" id="compendium_search" onsubmit="jump_to()">
+        <p>
+            <input id="search" type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </p>
+    </form>
     <li>
-        <a href="{% url 'compendium' %}#variables">Variablen</a>
+        <a href="#variables">Variablen</a>
     </li>
     <li>
-        <a href="{% url 'compendium' %}#classes">Klassen</a>
+        <a href="#classes">Klassen</a>
     </li>
     <li>
-        <a href="{% url 'compendium' %}#functions">Funktionen</a>
+        <a href="#functions">Funktionen</a>
     </li>
     <li>
-        <a href="{% url 'compendium' %}#lists">Listen</a>
+        <a href="#lists">Listen</a>
     </li>
     <li>
-        <a href="{% url 'compendium' %}#arrays">Arrays</a>
+        <a href="#arrays">Arrays</a>
     </li>
 {% endblock side_nav_content %}
 
 {% block page_content %}
-    <h1 id="variables">Variablen</h1>
-    Variablen sind sehr hilfreich.
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 id="classes">Klassen</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 id="functions">Funktionen</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 id="lists">Listen</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 id="arrays">Arrays</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div id="compendium_content" data-spy="scroll" data-target="#sidebar" data-offset="0">
+        <h1 id="variables">Variablen</h1>
+        Variablen.
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 id="classes">Klassen</h1>
+        Klassen.
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 id="functions">Funktionen</h1>
+        Funktionen.
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 id="lists">Listen</h1>
+        Listen.
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 id="arrays">Arrays</h1>
+        Arrays.
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
 {% endblock page_content %}
