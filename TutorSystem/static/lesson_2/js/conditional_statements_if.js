@@ -28,11 +28,17 @@ function runit() {
             console.log(err.toString());
             outf(err.toString());
         });
+    hide_alerts();
 }
 
 function run() {
     runit();
     test_code();
+}
+
+function hide_alerts() {
+    document.getElementById('wrong').style.display = 'none';
+    document.getElementById('correct').style.display = 'none';
 }
 
 $(document).ready(function () {
