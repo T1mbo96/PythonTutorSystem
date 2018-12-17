@@ -26,7 +26,12 @@ function runit() {
         },
         function (err) {
             console.log(err.toString());
+            outf(err.toString());
         });
+}
+
+function run() {
+    runit();
 }
 
 $(document).ready(function () {
@@ -37,3 +42,30 @@ $(document).ready(function () {
         mode: "python",
     });
 });
+
+function test_code() {
+    var _output = document.getElementById('output').innerText;
+    if(_output==="50\n") {
+        show_success_alert();
+    } else {
+        show_danger_alert();
+    }
+}
+
+function show_success_alert() {
+    if (document.getElementById('correct').style.display === 'none') {
+        if (document.getElementById('wrong').style.display === 'block') {
+            document.getElementById('wrong').style.display = 'none';
+        }
+        document.getElementById('correct').style.display = 'block';
+    }
+}
+
+function show_danger_alert() {
+    if (document.getElementById('wrong').style.display === 'none') {
+        if (document.getElementById('correct').style.display === 'block') {
+            document.getElementById('correct').style.display = 'none';
+        }
+        document.getElementById('wrong').style.display = 'block';
+    }
+}

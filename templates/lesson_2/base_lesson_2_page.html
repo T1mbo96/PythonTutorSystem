@@ -7,7 +7,7 @@
 
 {% block head_css_section %}
     <link rel="stylesheet" href="{% static 'code_mirror/lib/codemirror.css' %}">
-    <link rel="stylesheet" href="{% static 'lesson_2/css/test_skulpt.css' %}">
+    <link rel="stylesheet" href="{% static 'lesson_2/css/variables.css' %}">
 {% endblock head_css_section %}
 
 {% block lesson_2_active %}
@@ -20,16 +20,20 @@
 
 {% block side_nav_content %}
     <li>
-        <a href="{% url 'test_skulpt' %}" class="{% block skulpt_active %}{% endblock skulpt_active %}">Test_Skulpt</a>
+        <a href="{% url 'lesson_2_variables' %}" class="{% block variables_active %}{% endblock variables_active %}">Variablen</a>
     </li>
     <li>
-        <a href="#">Placeholder</a>
+        <a href="{% url 'lesson_2_variables_exercise' %}"
+           class="{% block variables_exercise_active %}{% endblock variables_exercise_active %}">Variablen - Aufgabe</a>
     </li>
     <li>
-        <a href="#">Placeholder</a>
+        <a href="{% url 'lesson_2_conditional_statements_if' %}"
+           class="{% block conditional_statements_if_active %}{% endblock conditional_statements_if_active %}">Bedingte
+            Anweisungen - if</a>
     </li>
     <li>
-        <a href="#">Placeholder</a>
+        <a href="{% url 'lesson_2_turtle_graphics' %}"
+           class="{% block turtle_graphics_active %}{% endblock turtle_graphics_active %}">Turtle Graphics</a>
     </li>
     <li>
         <a href="#">Placeholder</a>

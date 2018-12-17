@@ -1,0 +1,32 @@
+{% extends 'lesson_2/base_lesson_2_page.html' %}
+{% load static %}
+
+{% block variables_exercise_active %}
+    sidebar_active
+{% endblock variables_exercise_active %}
+
+{% block page_content %}
+    <h1>Aufgabe zu Variablen</h1>
+    <div class="description_container">
+        In dieser Aufgabe machen Sie sich mit der Funktionsweise und Syntax von Variablen in Python vertraut. Sie werden
+        unterschiedliche Variablen erstellen, zuweisen und ausgeben lassen. Laden Sie sich die Aufgabe, wie <span
+            style="color: #7386D5">in diesem Artikel</span> beschrieben, herunter und bearbeiten Sie diese. Wenn Sie
+        damit fertig sind, dann können Sie ihren Code, wie <span style="color: #7386D5">in diesem Artikel</span>
+        beschrieben, auf Richtigkeit testen.
+    </div>
+    <h2>Link des Repository:</h2>
+    <div class="description_container repository_link_container">
+        <a href="#"><span style="color: #7386D5">Aufgabe 1</span></a>
+    </div>
+
+    <div class="navigation_buttons_container">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="{% url 'lesson_2_variables' %}" class="form-btn btn btn-danger my-2 my-sm-0">
+                Prev
+            </a>
+            <a href="{% url 'lesson_2_conditional_statements_if' %}" class="form-btn btn btn-success my-2 my-sm-0">
+                Next
+            </a>
+        </div>
+    </div>
+{% endblock page_content %}

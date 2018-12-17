@@ -13,6 +13,7 @@
     max-width: 250px;
     height: 100vh;
     padding-bottom: 56px;
+    z-index: 9999;
 }
 
 #sidebar.active {
@@ -106,4 +107,37 @@ ul ul a {
 .sidebar_active {
     color: #7386D5;
     background: #fff;
+}
+
+#skulpt_run_btn {
+    margin-top: 5px;
+}
+
+#output {
+    margin-top: 5px;
+}
+
+.skulpt_code_container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.description_container {
+    margin-bottom: 10px;
+}
+
+.example_picture_container {
+    margin-bottom: 10px;
+}
+
+.repository_link_container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#output {
+    width: 800px;
+    height: 391px;
+    background-color: white;
+    margin: 0 auto;
 }

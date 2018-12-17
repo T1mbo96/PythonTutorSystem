@@ -30,8 +30,20 @@ def test_blockly_custom(request):
     return render(request, 'lesson_1/test_blockly_custom.html')
 
 
-def test_skulpt(request):
-    return render(request, 'lesson_2/test_skulpt.html')
+def lesson_2_variables(request):
+    return render(request, 'lesson_2/variables.html')
+
+
+def lesson_2_variables_exercise(request):
+    return render(request, 'lesson_2/variables_exercise.html')
+
+
+def lesson_2_conditional_statements_if(request):
+    return render(request, 'lesson_2/conditional_statements_if.html')
+
+
+def lesson_2_turtle_graphics(request):
+    return render(request, 'lesson_2/turtle_graphics.html')
 
 
 def syntax_compendium(request):

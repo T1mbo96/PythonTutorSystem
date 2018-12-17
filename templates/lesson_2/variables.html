@@ -1,0 +1,92 @@
+{% extends 'lesson_2/base_lesson_2_page.html' %}
+{% load static %}
+
+{% block variables_active %}
+    sidebar_active
+{% endblock variables_active %}
+
+{% block page_content %}
+    <!-- Skulpt -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+    <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script>
+    <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
+    <script src="{% static 'lesson_2/js/variables.js' %}" type="text/javascript"></script>
+
+    <!-- CodeMirror -->
+    <script src="{% static 'code_mirror/lib/codemirror.js' %}"></script>
+    <script src="{% static 'code_mirror/mode/python/python.js' %}"></script>
+
+    <h1>Variablen</h1>
+    <div class="description_container">
+        Eine Variable im allgemeinsten Sinne ist ein einfacher Behälter zur Aufbewahrung von bestimmten
+        Werten, also z.B. Buchstaben oder Zahlen. Man kann im Verlauf des Programms auf diese Variablen, oder genauer
+        auf den Wert ihres Inhaltes zugreifen, oder ihnen einen neuen Wert zuweisen. In den meisten Programmiersprachen,
+        wie z.B. C, ist es so, dass eine Variable einen festen Speicherplatz bezeichnet, in dem Werte eines bestimmten
+        Datentyps abgelegt werden können. Während des Programmlaufes kann sich der Wert der Variable ändern, aber die
+        Wertänderungen müssen vom gleichen Typ sein. Also kann man nicht in einer Variable zu einem bestimmten Zeitpunkt
+        eine Integerzahl gespeichert haben und dann diesen Wert durch eine Fließkommazahl überschreiben. Ebenso ist der
+        Speicherort der Variablen während des gesamten Laufes konstant, kann also nicht mehr geändert werden. In
+        Sprachen wie C wird der Speicherort bereits durch den Compiler fixiert. In Python sieht dies anders aus.
+        Zunächst einmal bezeichnen Variablen in Python keinen bestimmten Typ und deshalb benötigt man auch in Python
+        keine Typdeklaration. Benötigt man im Programm bespielsweise eine Variable i mit dem Wert 50, so erreicht man
+        dies einfach mit der folgenden Anweisung:
+    </div>
+    <img class="example_picture_container" src="{% static 'pictures/python_variables_example.PNG' %}"
+         alt="Example of variables in Python.">
+    <div class="description_container">
+        Um das oben beschriebene Konstrukt und die dazugehörige Syntax besser kennen zu lernen, haben Sie anschließend
+        die Möglichkeit selbst Variablen zu deklarieren und diese ausgeben zu lassen. Dafür können sie die in Python
+        enthaltene Funktion <span style="color: #7386D5">(wird in einer späteren Lektion erläutert)</span> "print()"
+        benutzen. Im folgenden Beispiel wird die
+        Verwendung dieser Funktion dargestellt:
+    </div>
+    <img class="example_picture_container" src="{% static 'pictures/python_print_example.PNG' %}"
+         alt="Example of print function in Python.">
+    <div class="description_container">
+        Sie können mithilfe dieser Funktion auch direkt Werte ausgeben lassen, ohne vorher eine Variable deklarieren zu
+        müssen. Dafür müssen Sie anstatt des Namens der Variable einfach nur den Wert in die Klammern einfügen. Dies ist
+        am folgenden Beispiel ersichtlich:
+    </div>
+    <img class="example_picture_container" src="{% static 'pictures/python_print_without_variable_example.PNG' %}"
+         alt="Example of print function without variable.">
+
+    <h2>Aufgabe</h2>
+    <div class="description_container">
+        Im folgenden Textfeld können Sie nun selbst Beispiele ausprobieren, um sich mit der Syntax und Funktionsweise
+        vertraut zu machen. Erstellen Sie bitte eine Variable mit Namen 'integer', deren Wert Sie auf "50" (ohne "")
+        setzen. Anschließend wird die Variable mithilfe der print()-Funktion ausgeben. Wenn Sie ihren Code eingegeben
+        haben können Sie ihn mit einem Klick auf den Button 'Run' testen.
+    </div>
+
+    <h3>Bitte Code hier eingeben:</h3>
+    <div class="skulpt_code_container">
+        <form>
+            <label for="custom_code"></label>
+            <textarea id="custom_code" cols="40" rows="10">
+# In folgender Zeile bitte ihren Code eintragen
+
+# Hiermit wird der Wert der Variable 'integer' ausgegeben
+print(integer)</textarea>
+            <br/>
+            <div id="skulpt_run_btn">
+                <button type="button" onclick="run()" class="form-btn btn my-2 my-sm-0">Run</button>
+            </div>
+        </form>
+    </div>
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+    <div class="alert alert-success" role="alert" id="correct" style="display: none">
+        Klasse! Dein Code war richtig!
+    </div>
+    <div class="alert alert-danger" role="alert" id="wrong" style="display: none">
+        Schade, dein Code war leider nicht richtig! Versuche es noch einmal!
+    </div>
+
+    <div class="navigation_buttons_container">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="{% url 'lesson_2_variables_exercise' %}" class="form-btn btn btn-success my-2 my-sm-0">
+                Next
+            </a>
+        </div>
+    </div>
+{% endblock page_content %}
