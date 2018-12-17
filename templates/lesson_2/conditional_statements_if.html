@@ -10,7 +10,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
     <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script>
     <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
-    <script src="{% static 'lesson_2/js/variables.js' %}" type="text/javascript"></script>
+    <script src="{% static 'lesson_2/js/conditional_statements_if.js' %}" type="text/javascript"></script>
 
     <!-- CodeMirror -->
     <script src="{% static 'code_mirror/lib/codemirror.js' %}"></script>
@@ -38,23 +38,64 @@
          alt="Example of if statement">
     <div class="description_container">
         Wenn 50 kleiner als 100 ist, dann wird in diesem Fall "50 is smaller than 100" ausgegeben. Man kann dieses
-        Konstrukt mit jedem Booleschen Operator verwenden. Im folgenden Textfeld haben Sie wieder selbstständig die
-        Möglichkeit das eben gelernte auszuprobieren.
+        Konstrukt mit jedem Booleschen Operator verwenden.
     </div>
+
+    <h2>Aufgabe</h2>
+    <div class="description_container">
+        Schreiben Sie für jeden Abschnitt der nachfolgenden Tabelle jeweils eine if-Anweisungen, sodass ein
+        Wettbewerber wissen kann, welchen der Preise aus der Tabelle er gewonnen hat, basierend auf der Anzahl der
+        erzielten Punkte, die in der ganzzahligen Variable "points" gespeichert ist.
+    </div>
+    <img class="example_picture_container"
+         src="{% static 'pictures/python_conditional_statements_if_exercise_table.PNG' %}"
+         alt="Table with prize ranges.">
+    <div class="description_container">
+        Alle unteren und oberen Grenzen sind hier inklusive, und Punkte können nur positive ganzzahlige Werte bis zu 200
+        annehmen.
+    </div>
+    <div class="description_container">
+        Weisen Sie in Ihren if-Anweisungen der Variable "result" eine Zeichenfolge zu, die die entsprechende Nachricht
+        enthält, basierend auf dem Wert der Punkte. Wenn ein Preis gewonnen wurde, sollte die Nachricht "Sehr gut!
+        Sie haben einen [Preisname] gewonnen!" (ohne "" und ersetzen Sie [Preisname] mit dem Namen des jeweiligen
+        Preises aus der Tabelle). Wenn es keinen Preis gibt, sollte in der Nachricht "Oh schade, diesmal gibt es keinen
+        Preis" stehen.
+    </div>
+    <div class="description_container">
+        <div class="alert alert-primary" role="alert">
+            Sie dürfen ihren eigenen Code gerne mit anderen Eingaben testen, um den Test bestehen zu können, sollten Sie
+            zum testen nur den ursprünglichen Wert von 174 nutzen.
+        </div>
+    </div>
+
 
     <h3>Bitte Code hier eingeben:</h3>
     <div class="skulpt_code_container">
         <form>
             <label for="custom_code"></label>
-            <textarea id="custom_code" cols="40" rows="10"></textarea>
+            <textarea id="custom_code" cols="40" rows="10">points = 174 # Nutzen Sie diesen Wert für die Abgabe
+
+# Schreiben Sie Ihre if-Statements bitte hier
+
+
+print(result)
+</textarea>
             <br/>
             <div id="skulpt_run_btn">
-                <button type="button" onclick="runit()" class="form-btn btn my-2 my-sm-0">Run</button>
+                <button type="button" onclick="run()" class="form-btn btn my-2 my-sm-0">Run</button>
             </div>
         </form>
     </div>
     <h3>Output:</h3>
-    <pre id="output"></pre>
+    <div class="description_container">
+        <pre id="output"></pre>
+    </div>
+    <div class="alert alert-success" role="alert" id="correct" style="display: none">
+        Klasse! Dein Code war richtig!
+    </div>
+    <div class="alert alert-danger" role="alert" id="wrong" style="display: none">
+        Schade, dein Code war leider nicht richtig! Versuche es noch einmal!
+    </div>
 
     <div class="navigation_buttons_container">
         <div class="btn-group" role="group" aria-label="Basic example">
